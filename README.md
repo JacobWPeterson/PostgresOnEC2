@@ -5,4 +5,4 @@ The purpose of this repo is to offer a solution for running a Postgres on a free
 ### Initial Setup
 
 1. Launch an AWS EC2 Instance
-<img src="https://github.com/JacobWPeterson/PostgresOnEC2/Screengrabs/Ubuntu.png" alt="Linux 20"/>
+<img src="https://github.com/JacobWPeterson/PostgresOnEC2/blob/main/Screengrabs/Ubuntu.png" alt="Linux 20"/>
