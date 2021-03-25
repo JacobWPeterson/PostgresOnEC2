@@ -27,4 +27,4 @@ You can now also confirm that your outbound rules are as follows
 2. Copy the chmod command and run in your terminal to hide your PEM
 3. Copy the 'ssh' prefixed command and run it in your terminal to connect to the instance
 
-### Now follow the steps in Setup.sh
+### Now follow the steps in Setup.sh in this repo
