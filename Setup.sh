@@ -30,11 +30,13 @@ sudo vim /etc/postgresql/12/main/postgresql.conf
 
 # Edit the listen_address (for me, on line 59) to read (ensure you've deleted
 # the # at the beginning of the line)
+# If you're unsure, see the screengrab in ./Screengrabs/Listen.png
 listen_addresses = '*'
 
 # Exit config file after saving and open the following file
 # If the following command does not work, use the route to this file output by
 # running sudo find / -name "pg_hba.conf"
+# If you're unsure, see the screengrab in ./Screengrabs/Connections.png
 sudo vim /etc/postgresql/12/main/pg_hba.conf
 
 # Near the bottom of the file, edit the address for your IPv4 and IPv6 local
