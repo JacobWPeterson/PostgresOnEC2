@@ -21,3 +21,10 @@ These can also be configured to only apply to your IP address by choosing "MyIP"
 6. Review and Launch
 You can now also confirm that your outbound rules are as follows
 <img src="https://github.com/JacobWPeterson/PostgresOnEC2/blob/main/Screengrabs/Outbound.png" alt="Outbound Rules"/>
+
+### Connect to Instance
+1. From your new instance's main page, click connect in the upper right
+2. Copy the chmod command and run in your terminal to hide your PEM
+3. Copy the 'ssh' prefixed command and run it in your terminal to connect to the instance
+
+### Now follow the steps in Setup.sh
