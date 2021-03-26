@@ -16,9 +16,8 @@ For this I will be using the Ubuntu 20.04 server available with the free tier
 5. Security Groups
 Inbound Rules should reflect a Postgres db as follows (the SSH is necessary for connecting to the instance).
 These conifgs open your instance to any IP address, but they can also be configured to only apply to your IP address by choosing 'MyIP' in the dropdown or by entering the address of the desired server.
-<img src="https://github.com/JacobWPeterson/PostgresOnEC2/blob/main/Screengrabs/Inbound.png" alt="Inbound Rules"/>
-
 * To allow private access to your instance, consider using AWS's <a href="https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html">VPC Peering</a>
+<img src="https://github.com/JacobWPeterson/PostgresOnEC2/blob/main/Screengrabs/Inbound.png" alt="Inbound Rules"/>
 
 6. Review and Launch
 You can now also confirm that your outbound rules are as follows
