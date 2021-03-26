@@ -1,6 +1,6 @@
 # PostgresOnEC2
 
-The purpose of this repo is to offer a solution for running Postgres on a free AWS EC2 instance rather than with RDS. This is not intended for production level implementations, but rather personal development where you need a working but free cloud database.
+The purpose of this repo is to offer a solution for running Postgres on a free AWS EC2 instance rather than with RDS. This is not intended for production level implementations, but rather personal development where you need a working but free cloud database. If you have already launched an EC2 instance and set its security group for Postgres, then skip to <a href="https://github.com/JacobWPeterson/PostgresOnEC2/blob/main/Setup.sh">Setup.sh</a>
 
 ## Initial Setup
 
@@ -29,7 +29,7 @@ You can now also confirm that your outbound rules are as follows
 2. *Copy the `chmod 400` command and run it in your terminal*
 * This hides your PEM key from public-access (i.e. non-owners). To learn more about the chmod command and its octal system for representing read, write, and execute permissions, see <a href="https://www.linux.com/training-tutorials/understanding-linux-file-permissions/">Linux Tutorials</a> or the chmod entry on <a href="https://en.wikipedia.org/wiki/Chmod">Wikipedia</a>
 * Since PEM keys permit root access to the instance, you will also want to make sure you include the PEM key in your `.gitignore` file before pushing to GitHub
-* If you accidentally make your key public, then GitHub, AWS, or your terminal would likely alert you, but to delete it you can run: `aws ec2 delete-key-pair --key-name MyKeyPair` where `MyKeyPair` is the name of your PEM key. <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#troubleshoot-unprotected-key">AWS Documentation</a>
+* If you accidentally make your key public, then GitHub, AWS, or your terminal would likely alert you, but to delete it you can run: `aws ec2 delete-key-pair --key-name MyKeyPair` where `MyKeyPair` is the name of your PEM key. This may require the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS CLI</a>, which you can get by running `sudo apt-get update` followed by `sudo apt-get install awscli` from your Ubuntu terminal. For more, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#troubleshoot-unprotected-key">AWS Documentation</a>
 3. Copy the 'ssh' prefixed command and run it in your terminal to connect to the instance
 
 ### Now follow the steps in <a href="https://github.com/JacobWPeterson/PostgresOnEC2/blob/main/Setup.sh">Setup.sh</a> in this repo
