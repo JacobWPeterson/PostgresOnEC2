@@ -24,7 +24,10 @@ You can now also confirm that your outbound rules are as follows
 
 ### Connect to Instance
 1. From your new instance's main page, click connect in the upper right
-2. Copy the chmod command and run in your terminal to hide your PEM
+2. Ensure you copy the 'chmod 400' command and run it in your terminal
+* This hides your PEM key from public-access (i.e. non-users/non-owners)
+* Since PEM keys permit root access to the instance, you will also want to make sure you include the PEM key in your .gitignore file before pushing to GitHub
+* If you accidentally make your key public, then GitHub, AWS, or your terminal would likely alert you, but to delete it you can run: 'aws ec2 delete-key-pair --key-name MyKeyPair' where 'MyKeyPair' is the name of your PEM key. <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#troubleshoot-unprotected-key">AWS Documentation</a>
 3. Copy the 'ssh' prefixed command and run it in your terminal to connect to the instance
 
 ### Now follow the steps in Setup.sh in this repo
