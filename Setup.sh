@@ -23,20 +23,26 @@ psql postgres -U yourName
 # Exit back to the Ubuntu terminal
 exit
 
-# Alter the Postgresql Config file to listen on all ports
+# Alter the Postgresql Config file, which specifies the main server configuration,
+# to listen on all ports. For more on the listen_addresses setting, see
+# (https://www.postgresql.org/docs/13/runtime-config-connection.html)
 # If the following command does not work, use the route to this file output by
 # running sudo find / -name "postgresql.conf"
 sudo vim /etc/postgresql/12/main/postgresql.conf
 
-# Edit the listen_address (for me, on line 59) to read (ensure you've deleted
-# the # at the beginning of the line)
-# If you're unsure, see the screengrab in ./Screengrabs/Listen.png
+# Edit the listen_address setting (on mine, line 59) to read:
 listen_addresses = '*'
 
-# Exit config file after saving and open the following file
+# (Ensure you've deleted the # at the beginning of the line)
+# If you're unsure of your setup, see the screengrab at
+# (https://github.com/JacobWPeterson/PostgresOnEC2/blob/main/Screengrabs/Listen.png)
+# Exit config file after saving
+
+# Open the hba_file, which specifies the configuration file for host-based
+# authentication and can only be set at server start. To learn more about thid file,
+# see (https://www.postgresql.org/docs/current/auth-pg-hba-conf.html)
 # If the following command does not work, use the route to this file output by
-# running sudo find / -name "pg_hba.conf"
-# If you're unsure, see the screengrab in ./Screengrabs/Connections.png
+# running: sudo find / -name "pg_hba.conf"
 sudo vim /etc/postgresql/12/main/pg_hba.conf
 
 # Near the bottom of the file, edit the address for your IPv4 and IPv6 local
@@ -46,6 +52,10 @@ sudo vim /etc/postgresql/12/main/pg_hba.conf
 host      all      all        0.0.0.0/0       md5
 #IPv6 local connections
 host      all      all        ::/0            md5
+
+# If you're unsure you've set it correctly, see the screengrab at
+# (https://github.com/JacobWPeterson/PostgresOnEC2/blob/main/Screengrabs/Connections.png)
+# Exit config file after saving
 
 # restart the server
 sudo systemctl restart postgresql
