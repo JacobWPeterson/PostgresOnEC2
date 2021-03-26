@@ -30,4 +30,4 @@ You can now also confirm that your outbound rules are as follows
 * If you accidentally make your key public, then GitHub, AWS, or your terminal would likely alert you, but to delete it you can run: 'aws ec2 delete-key-pair --key-name MyKeyPair' where 'MyKeyPair' is the name of your PEM key. <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#troubleshoot-unprotected-key">AWS Documentation</a>
 3. Copy the 'ssh' prefixed command and run it in your terminal to connect to the instance
 
-### Now follow the steps in Setup.sh in this repo
+### Now follow the steps in <a href="https://github.com/JacobWPeterson/PostgresOnEC2/blob/main/Setup.sh">Setup.sh</a> in this repo
