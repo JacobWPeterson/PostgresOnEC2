@@ -6,7 +6,7 @@ If you'd like to add setup instructions for other DBMS (e.g. mySQL or MongoDB) f
 
 ## Submitting Changes
 
-Please submit a pull request with a clear list of what you've done (read more about [pull requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request). Please follow the formatting conventions (below) and make sure all of your commits are complete.
+Please submit a pull request with a clear list of what you've done (read more about [pull requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)). Please follow the formatting conventions (below) and make sure all of your commits are complete.
 
 Always write a clear log message for your commits. One-line messages are fine for small changes, but bigger changes should look like this:
 
